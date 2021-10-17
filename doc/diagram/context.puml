@@ -1,0 +1,18 @@
+@startuml
+
+!include ./C4/C4_Context.puml
+
+SHOW_PERSON_OUTLINE()
+
+Person(customer, "Personal Banking Customer", "A customer of the bank, with personal bank accounts")
+
+System(system, "Internet Banking System", "Allows customers to view their accounts and make payments")
+System_Ext(email, "Email system", "The internal mail server")
+System_Ext(mainframe, "Mainframe Banking System", "Processes all core banking rules")
+
+Rel(customer, system, "Views account balances, and makes payments using")
+Rel(system, email, "Sends email using")
+Rel(email, customer, "Sends emails to")
+Rel(system, mainframe, "Gets account information from, and makes payments using")
+
+@enduml

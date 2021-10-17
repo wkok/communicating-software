@@ -1,0 +1,30 @@
+@startuml
+
+actor customer
+participant mobile
+participant api
+database database as db
+participant mainframe as main
+
+customer -> mobile ++ : confirms payment
+
+mobile -> api ++ : sends payment request as JSON
+
+api -> db ++ : retrieve available balance
+return balance
+
+api -> main ++ : sends calculation request in XML
+
+main -> main : do complex calculation
+return calculation result in XML
+
+api -> db ++ : persist transaction
+return transaction id
+
+return returns result as JSON
+
+mobile -> mobile : renders confirmation page
+
+return happy customer
+
+@enduml
