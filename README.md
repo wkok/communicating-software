@@ -4,7 +4,7 @@ Documenting a fictional Internet Banking System
 
 This repository presents a structure & samples of essential diagrams & architecture decision records to effectively communicate a software system.
 
-For more information see the original blog post at [blog](http://localhost)
+For more information see the original blog post at [blog](https://www.juxt.pro/blog/communicating-software)
 
 ## Diagrams
 
